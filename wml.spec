@@ -75,7 +75,7 @@ d=$RPM_BUILD_ROOT%{_libdir}/wml
 find $d -name ".packlist" | xargs rm -f
 for i in $(find $d -name "*.bs"); do
     if [ -s $i ]; then
-      echo "non empty *.bs file, please mail pixel@mandrakesoft.com about this!"
+      echo "non empty *.bs file, please mail pixel@mandriva.com about this!"
     else
       rm -f $i
     fi

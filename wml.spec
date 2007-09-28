@@ -19,6 +19,7 @@ BuildRequires:	ncurses-devel
 BuildRequires:	libtool
 BuildRequires:	pcre-devel
 BuildRequires:	perl-devel
+BuildRequires:	gettext-devel
 # Please do not ever link this with an old db version than the current system db version
 # libperl uses {get,set}pw*() functions which might bring in the system db version via nss,
 # and lead to unexpected crashes

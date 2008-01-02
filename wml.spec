@@ -38,6 +38,7 @@ Requires:	perl(Getopt::Long) >= 2.16
 Requires:	perl(Image::Size) >= 2.6
 Requires:	perl(IO::File) >= 1.07
 Requires:	perl(Term::ReadKey) >= 2.11
+Buildroot:	%{_tmppath}/%{name}-buildroot
 
 %description
 WML is a free and extensible Webdesigner's off-line HTML generation

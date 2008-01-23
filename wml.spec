@@ -5,7 +5,7 @@
 Summary:	Website META Language
 Name:		wml
 Version:	2.0.11
-Release:	%mkrel 1
+Release:	%mkrel 2
 License:	GPL
 Group:		Publishing
 URL:		http://www.engelschall.com/sw/wml
@@ -15,6 +15,7 @@ Patch1:		wml-pathconvert.diff
 Patch2:		wml-2.0.9-perllibs.patch
 Patch3:		wml-LD_RUN_PATH.diff
 Patch4:		wml-external_pcre_libs.diff
+Patch5:		wml-perl5.10.patch 
 BuildRequires:	ncurses-devel
 BuildRequires:	libtool
 BuildRequires:	pcre-devel
@@ -56,6 +57,7 @@ environments.
 %patch2 -p1 -b .perllibs
 %patch3 -p0 -b .LD_RUN_PATH
 %patch4 -p1 -b .external_pcre_libs
+%patch5 -p0 -b .perl510
 
 find -type d -name "autom4te.cache" | xargs rm -rf 
 

@@ -5,7 +5,7 @@
 Summary:	Website META Language
 Name:		wml
 Version:	2.0.11
-Release:	%mkrel 2
+Release:	%mkrel 3
 License:	GPL
 Group:		Publishing
 URL:		http://www.engelschall.com/sw/wml
@@ -16,6 +16,7 @@ Patch2:		wml-2.0.9-perllibs.patch
 Patch3:		wml-LD_RUN_PATH.diff
 Patch4:		wml-external_pcre_libs.diff
 Patch5:		wml-perl5.10.patch 
+Patch6:		wml-2.0.11-CVE-2008-0665_CVE-2008-0666.diff
 BuildRequires:	ncurses-devel
 BuildRequires:	libtool
 BuildRequires:	pcre-devel
@@ -39,7 +40,7 @@ Requires:	perl(Getopt::Long) >= 2.16
 Requires:	perl(Image::Size) >= 2.6
 Requires:	perl(IO::File) >= 1.07
 Requires:	perl(Term::ReadKey) >= 2.11
-Buildroot:	%{_tmppath}/%{name}-buildroot
+Buildroot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 WML is a free and extensible Webdesigner's off-line HTML generation
@@ -58,6 +59,7 @@ environments.
 %patch3 -p0 -b .LD_RUN_PATH
 %patch4 -p1 -b .external_pcre_libs
 %patch5 -p0 -b .perl510
+%patch6 -p1 -b .CVE-2008-0665_CVE-2008-0666
 
 find -type d -name "autom4te.cache" | xargs rm -rf 
 

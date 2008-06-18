@@ -5,7 +5,7 @@
 Summary:	Website META Language
 Name:		wml
 Version:	2.0.11
-Release:	%mkrel 4
+Release:	%mkrel 5
 License:	GPL
 Group:		Publishing
 URL:		http://www.engelschall.com/sw/wml

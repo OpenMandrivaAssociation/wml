@@ -5,7 +5,7 @@
 Summary:	Website META Language
 Name:		wml
 Version:	2.0.11
-Release:	%mkrel 5
+Release:	%mkrel 6
 License:	GPL
 Group:		Publishing
 URL:		http://www.engelschall.com/sw/wml
@@ -17,8 +17,10 @@ Patch3:		wml-LD_RUN_PATH.diff
 Patch4:		wml-external_pcre_libs.diff
 Patch5:		wml-perl5.10.patch 
 Patch6:		wml-2.0.11-CVE-2008-0665_CVE-2008-0666.diff
+Patch7:		wml-2.0.11-autotools.patch
+Patch8:		wml_wformat.patch
 BuildRequires:	ncurses-devel
-BuildRequires:	libtool
+BuildRequires:	libtool libltdl-devel
 BuildRequires:	pcre-devel
 BuildRequires:	perl-devel
 BuildRequires:	gettext-devel
@@ -60,6 +62,8 @@ environments.
 %patch4 -p1 -b .external_pcre_libs
 %patch5 -p0 -b .perl510
 %patch6 -p1 -b .CVE-2008-0665_CVE-2008-0666
+%patch7 -p0
+%patch8 -p1
 
 find -type d -name "autom4te.cache" | xargs rm -rf 
 
@@ -72,10 +76,10 @@ pushd wml_backend/p3_eperl
 popd
 
 pushd wml_backend/p2_mp4h
-    libtoolize --automake -c -f; aclocal; automake -a -c; autoheader; autoconf
+    autoreconf -fi
 popd
 
-CFLAGS="$RPM_OPT_FLAGS" ./configure --prefix=%{_prefix} --libdir=%{_libdir} --with-openworld
+CFLAGS="$RPM_OPT_FLAGS" ./configure --prefix=%{_prefix} --libdir=%{_libdir} --with-openworld --without-included-ltdl
 
 %make
 

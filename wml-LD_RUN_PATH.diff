@@ -1,0 +1,11 @@
+--- wml_common/Makefile.in	2007-09-28 14:44:19.000000000 +0200
++++ wml_common/Makefile.in.oden	2007-09-28 14:45:10.000000000 +0200
+@@ -32,7 +32,7 @@
+                   INSTALLMAN1DIR= \
+                   INST_MAN3DIR= \
+                   INSTALLMAN3DIR=
+-PERL_OPTS       = @PERL_OPTS@
++PERL_OPTS       = @PERL_OPTS@ LD_RUN_PATH=
+ 
+ INITVARS = \
+      have_getoptlong=@have_getoptlong@ \

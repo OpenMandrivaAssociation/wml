@@ -1,0 +1,53 @@
+diff -Naur wml-2.0.11/wml_backend/p2_mp4h/configure.ac wml-2.0.11.oden/wml_backend/p2_mp4h/configure.ac
+--- wml-2.0.11/wml_backend/p2_mp4h/configure.ac	2006-06-12 13:33:13.000000000 +0200
++++ wml-2.0.11.oden/wml_backend/p2_mp4h/configure.ac	2007-09-28 13:05:09.000000000 +0200
+@@ -179,7 +179,6 @@
+ AC_CONFIG_FILES([
+    Makefile
+    intl/Makefile
+-   pcre/Makefile
+    lib/Makefile
+    src/Makefile
+    po/Makefile.in
+diff -Naur wml-2.0.11/wml_backend/p2_mp4h/Makefile.am wml-2.0.11.oden/wml_backend/p2_mp4h/Makefile.am
+--- wml-2.0.11/wml_backend/p2_mp4h/Makefile.am	2005-12-01 18:50:13.000000000 +0100
++++ wml-2.0.11.oden/wml_backend/p2_mp4h/Makefile.am	2007-09-28 13:08:03.000000000 +0200
+@@ -1,15 +1,15 @@
+ 
+ AUTOMAKE_OPTIONS = foreign
+ 
+-DIST_SUBDIRS = intl pcre lib src po doc modules tests
++DIST_SUBDIRS = intl lib src po doc modules tests
+ 
+ if LOADABLE_MODULES
+-SUBDIRS = intl pcre lib src po doc modules tests
++SUBDIRS = intl lib src po doc modules tests
+ else
+-SUBDIRS = intl pcre lib src po doc tests
++SUBDIRS = intl lib src po doc tests
+ endif
+ 
+-EXTRA_DIST = CREDITS README README.pcre bootstrap.sh shtool
++EXTRA_DIST = CREDITS README bootstrap.sh shtool
+ 
+ deb:
+ 	if test -f ../mp4h_$(VERSION).orig.tar.gz; then \
+diff -Naur wml-2.0.11/wml_backend/p2_mp4h/src/Makefile.am wml-2.0.11.oden/wml_backend/p2_mp4h/src/Makefile.am
+--- wml-2.0.11/wml_backend/p2_mp4h/src/Makefile.am	2005-12-01 18:50:13.000000000 +0100
++++ wml-2.0.11.oden/wml_backend/p2_mp4h/src/Makefile.am	2007-09-28 13:07:41.000000000 +0200
+@@ -1,5 +1,5 @@
+ 
+-INCLUDES = -I$(top_srcdir)/pcre -I$(top_srcdir)/lib @INTLINCL@
++INCLUDES = -I$(top_srcdir)/lib @INTLINCL@
+ 
+ bin_PROGRAMS = mp4h
+ 
+@@ -16,7 +16,7 @@
+ if LOADABLE_MODULES
+ mp4h_LDFLAGS = -export-dynamic
+ endif
+-mp4h_LDADD   = -lm $(top_builddir)/lib/libmp4h.a $(top_builddir)/pcre/libpcre.a @INTLLIBS@
++mp4h_LDADD   = -lm $(top_builddir)/lib/libmp4h.a -lpcre @INTLLIBS@
+ 
+ include_HEADERS = mp4h.h
+ noinst_HEADERS  = builtin.h ltdl.h

@@ -22,8 +22,8 @@ BuildRequires:	libltdl-devel
 BuildRequires:	pcre-devel
 BuildRequires:	perl-devel
 # (tpg) use system version not the pulled in here
-#BuildRequires:	gdbm-devel
 #BuildRequires:	db-devel
+BuildRequires:	gdbm-devel
 BuildRequires:	gettext-devel
 BuildRequires:	lynx
 BuildRequires:	perl-Bit-Vector >= 5.2

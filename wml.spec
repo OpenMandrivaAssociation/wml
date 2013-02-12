@@ -10,7 +10,7 @@
 Summary:	Website META Language
 Name:		wml
 Version:	2.2.0
-Release:	1
+Release:	2
 License:	GPLv2+
 Group:		Publishing
 URL:		http://thewml.org/
@@ -167,7 +167,7 @@ make
 * Thu Sep 18 2003 Gwenole Beauchesne <gbeauchesne@mandrakesoft.com> 2.0.9-7mdk
 - BuildRequires: libgdbm-devel
 
-* Wed Jun 18 2003 Per Øyvind Karlsen <peroyvind@sintrax.net> 2.0.9-6mdk
+* Wed Jun 18 2003 Per Ã˜yvind Karlsen <peroyvind@sintrax.net> 2.0.9-6mdk
 - get rid of debug stuff in %%{_libdir}
 - compile with $RPM_OPT_FLAGS
 - don't rm -rf $RPM_OPT_FLAGS in %%prep stage
@@ -175,19 +175,19 @@ make
 * Tue May 27 2003 Thierry Vignaud <tvignaud@mandrakesoft.com> 2.0.9-5mdk
 - rebuild for new auto{prov,req}
 
-* Wed Mar 12 2003 Götz Waschk <waschk@linux-mandrake.com> 2.0.9-4mdk
+* Wed Mar 12 2003 GÃ¶tz Waschk <waschk@linux-mandrake.com> 2.0.9-4mdk
 - fix buildrequires
 
-* Wed Mar 12 2003 Götz Waschk <waschk@linux-mandrake.com> 2.0.9-3mdk
+* Wed Mar 12 2003 GÃ¶tz Waschk <waschk@linux-mandrake.com> 2.0.9-3mdk
 - fix buildrequires
 
-* Wed Mar 12 2003 Götz Waschk <waschk@linux-mandrake.com> 2.0.9-2mdk
+* Wed Mar 12 2003 GÃ¶tz Waschk <waschk@linux-mandrake.com> 2.0.9-2mdk
 - fix buildrequires
 
 * Tue Jan 07 2003 Lenny Cartier <lenny@mandrakesoft.com> 2.0.9-1mdk
 - 2.0.9
 
-* Fri Jul 12 2002 Götz Waschk <waschk@linux-mandrake.com> 2.0.8-1mdk
+* Fri Jul 12 2002 GÃ¶tz Waschk <waschk@linux-mandrake.com> 2.0.8-1mdk
 - buildrequires db2-devel
 - patch eperl to build with perl 5.8.0
 - 2.0.8
@@ -202,12 +202,12 @@ make
 - rebuild
 
 * Wed Nov 08 2000 Lenny Cartier <lenny@mandrakesoft.com> 2.0.6-1mdk
-- updated by Götz Waschk <waschk@linux-mandrake.com> :
+- updated by GÃ¶tz Waschk <waschk@linux-mandrake.com> :
 	- 2.0.6
 
-* Wed Sep  6 2000 Götz Waschk <waschk@linux-mandrake.com> 2.0.3-1mdk
+* Wed Sep  6 2000 GÃ¶tz Waschk <waschk@linux-mandrake.com> 2.0.3-1mdk
 - updated to 2.0.3
 - make rpmlint happy
 
-* Sun Jul 30 2000 Götz Waschk <waschk@linux-mandrake.com> 2.0.2-1mdk
+* Sun Jul 30 2000 GÃ¶tz Waschk <waschk@linux-mandrake.com> 2.0.2-1mdk
 - initial Mandrake package

@@ -9,8 +9,8 @@
 
 Summary:	Website META Language
 Name:		wml
-Version:	2.2.0
-Release:	2
+Version:	2.2.1
+Release:	1
 License:	GPLv2+
 Group:		Publishing
 URL:		http://thewml.org/
@@ -21,8 +21,9 @@ BuildRequires:	libtool
 BuildRequires:	libltdl-devel
 BuildRequires:	pcre-devel
 BuildRequires:	perl-devel
-BuildRequires:	gdbm-devel
-BuildRequires:	db-devel
+# (tpg) use system version not the pulled in here
+#BuildRequires:	gdbm-devel
+#BuildRequires:	db-devel
 BuildRequires:	gettext-devel
 BuildRequires:	lynx
 BuildRequires:	perl-Bit-Vector >= 5.2
@@ -33,6 +34,12 @@ BuildRequires:	perl(HTML::Clean)
 BuildRequires:	perl(Image::Size) >= 2.6
 BuildRequires:	perl(IO::File) >= 1.07
 BuildRequires:	perl(Term::ReadKey) >= 2.11
+Requires:	perl(Bit::Vector) >= 5.2
+Requires:	perl(File::Spec)
+Requires:	perl(Getopt::Long) >= 2.16
+Requires:	perl(Image::Size) >= 2.6
+Requires:	perl(IO::File) >= 1.07
+Requires:	perl(Term::ReadKey) >= 2.11
 
 %description
 WML is a free and extensible Webdesigner's off-line HTML generation
@@ -46,8 +53,8 @@ environments.
 %setup -q
 
 %build
-%cmake -DLIB_INSTALL_DIR=%{_libdir}
-make
+%cmake -DLIB_INSTALL_DIR=%{_libdir} -DLOCALE_INSTALL_DIR=%{_datadir}/locale
+%make
 
 # TODO : add percent-check once it is working.
 

@@ -23,6 +23,8 @@ BuildRequires:	pcre-devel
 BuildRequires:	perl-devel
 # (tpg) use system version not the pulled in here
 #BuildRequires:	db-devel
+# (crisb) doesnt seem to pull in the db-devel package so spec here
+BuildRequires:	db53-devel
 BuildRequires:	gdbm-devel
 BuildRequires:	gettext-devel
 BuildRequires:	lynx

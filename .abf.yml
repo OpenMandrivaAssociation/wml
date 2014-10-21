@@ -1,5 +1,6 @@
 removed_sources:
   wml-2.2.0.tar.bz2: aaf10b297a1a4e7e25d130921293cd6286ed1038
-  "wml-2.2.1.tar.bz2": 5fdb9d0c390337d58fc0fdb1132f6a114e083dca
-sources:
+  wml-2.2.1.tar.bz2: 5fdb9d0c390337d58fc0fdb1132f6a114e083dca
   wml-2.2.2.tar.bz2: 9cd5821c821ce9aaec1c9a69b46263e755bf90cb
+sources:
+  wml-2.4.1.tar.bz2: d88853e416542db24a59cd7499537c4af4a3e4b8

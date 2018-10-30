@@ -10,7 +10,7 @@
 Summary:	Website META Language
 Name:		wml
 Version:	2.4.1
-Release:	4
+Release:	5
 License:	GPLv2+
 Group:		Publishing
 URL:		http://thewml.org/

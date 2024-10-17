@@ -13,7 +13,7 @@ Version:	2.4.1
 Release:	6
 License:	GPLv2+
 Group:		Publishing
-URL:		http://thewml.org/
+URL:		https://thewml.org/
 Source:		https://bitbucket.org/shlomif/website-meta-language/downloads/%{name}-%{version}.tar.bz2
 BuildRequires:	cmake
 BuildRequires:	pkgconfig(ncurses)

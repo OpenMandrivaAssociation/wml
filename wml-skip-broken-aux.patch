@@ -1,17 +1,15 @@
 --- wml_aux/CMakeLists.txt
 +++ wml_aux/CMakeLists.txt
-@@ -4,12 +4,12 @@
- SET(dirs
-     map2html
-     txt2html
+@@ -4,12 +4,10 @@
+ CMAKE_MINIMUM_REQUIRED(VERSION 2.6)
+ 
+ SUBDIRS (
 -    iselect
+     htmlclean
      htmlinfo
      linklint
-     freetable
+     map2html
 -    tidy
-     htmlclean
- )
-+# iselect (duplicate Line) and tidy (manify) broken under modern clang/cmake
-+# - skip for now; core wml does not require them at runtime for basic use
- 
- FOREACH (dir ${dirs})
+     txt2html
+     weblint
+     freetable

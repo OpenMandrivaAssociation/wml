@@ -10,11 +10,12 @@
 Summary:	Website META Language
 Name:		wml
 Version:	2.4.1
-Release:	7
+Release:	8
 License:	GPLv2+
 Group:		Publishing
 URL:		https://thewml.org/
 Source:		https://bitbucket.org/shlomif/website-meta-language/downloads/%{name}-%{version}.tar.bz2
+Patch0:	wml-skip-broken-aux.patch
 BuildRequires:	cmake
 BuildRequires:	pkgconfig(ncurses)
 BuildRequires:	libtool
@@ -53,9 +54,10 @@ environments.
 
 %prep
 %setup -q
+%patch -P 0 -p0
 
 %build
-%cmake -DLIB_INSTALL_DIR=%{_libdir} -DLOCALE_INSTALL_DIR=%{_datadir}/locale
+%cmake -DLIB_INSTALL_DIR=%{_libdir} -DLOCALE_INSTALL_DIR=%{_datadir}/locale -DCMAKE_C_FLAGS="%{optflags} -fcommon"
 %make
 
 # TODO : add percent-check once it is working.

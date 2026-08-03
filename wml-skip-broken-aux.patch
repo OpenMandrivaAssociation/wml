@@ -1,0 +1,17 @@
+--- wml_aux/CMakeLists.txt
++++ wml_aux/CMakeLists.txt
+@@ -4,12 +4,12 @@
+ SET(dirs
+     map2html
+     txt2html
+-    iselect
+     htmlinfo
+     linklint
+     freetable
+-    tidy
+     htmlclean
+ )
++# iselect (duplicate Line) and tidy (manify) broken under modern clang/cmake
++# - skip for now; core wml does not require them at runtime for basic use
+ 
+ FOREACH (dir ${dirs})
